@@ -1,0 +1,129 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');*/
+
+nav {
+    position: fixed;
+    top: 0;
+    background: var(--nav);
+    left: 0;
+    right: 0;
+    padding: 10px 50px;
+    z-index: 99;
+}
+
+nav .kontejner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo  {
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+    /*border: 1px solid blue;*/
+    padding: 10px 0;
+
+}
+.logo h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 1px;
+    /*font-family: Poppins, sans-serif;*/
+    font-family: var(--fontTekst);
+}
+.logo a {
+    text-decoration: none;
+    color: var(--text1);
+    font-weight: bold;
+}
+.logo span {
+    color: var(--50);
+}
+
+
+.meni-elementi {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav .menu-ikona svg {
+    width: 30px;
+    display: flex;
+
+}
+nav .menu-ikona {
+    padding: 9px;
+    cursor: pointer;
+}
+
+
+.meni-elementi a {
+    color: var(--text1);
+    text-decoration: none;
+}
+.meni-elementi a:hover {
+    color: var(--50);
+}
+.mobile-menu-elementi a {
+    color: var(--text1);
+    text-decoration: none;
+    padding: 0 20px;
+}
+
+.mobile-menu-elementi {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: var(--nav);
+    top: 60px;
+    right: 10px;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/*Hidden items*/
+nav .menu-ikona, .mobile-menu-elementi {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .meni-elementi {
+        display: none;
+    }
+    .logo img {
+        width: 40px;
+    }
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 0 10px;
+    }
+
+    nav .menu-ikona {
+        display: block;
+        color: var(--text1);
+    }
+    .mobile-menu-elementi {
+        /*display: flex;*/
+        /*opacity: 0;*/
+        display: none;
+        pointer-events: none;
+    }
+    .mobile-menu-elementi.active {
+        /*opacity: 1;*/
+        display: flex;
+        pointer-events: auto;
+    }
+
+
+}

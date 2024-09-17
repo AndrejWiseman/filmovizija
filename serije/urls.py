@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import serije
+from .views import serije, serije_detaljno
 
+
+app_name = 'serije'
 urlpatterns = [
-    path('serije/', serije)
+    path('serije/', serije, name='serije'),
+    path('<slug:slug>/', serije_detaljno, name='serije-detaljno'),
 ]

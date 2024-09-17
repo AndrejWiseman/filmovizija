@@ -1,0 +1,40 @@
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+{% endblock %}
+
+<nav>
+    <div class="kontejner">
+
+        <div class="mobile-menu-elementi">
+            <a href="/">Pocetna</a>
+{#            <a href="{% url 'filmovi:filmovi' %}">Filmovi</a>#}
+            <a href="{% url 'serije:serije' %}">Serije</a>
+            <a href="#">Domaci filmovi</a>
+            <a href="#">Domace serije</a>
+        </div>
+
+        <div class="logo">
+            <a href="/"><img src="{% static 'images/slicicaa.png' %}" alt="logo"></a>
+            <a href="/" class="">
+                <h1>FILMO<span>VIZIJA</span>!</h1>
+            </a>
+        </div>
+
+        <div class="meni-elementi">
+            <a href="/">Pocetna</a>
+{#            <a href="{% url 'filmovi:filmovi' %}">Filmovi</a>#}
+            <a href="{% url 'serije:serije' %}">Serije</a>
+            <a href="#">Domaci filmovi</a>
+            <a href="#">Domace serije</a>
+        </div>
+
+        <div class="menu-ikona">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+            </svg>
+        </div>
+    </div>
+</nav>
+
